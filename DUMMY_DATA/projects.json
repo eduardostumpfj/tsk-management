@@ -1,0 +1,29 @@
+[
+  {
+    "id": "proj1",
+    "name": "Project Alpha",
+    "description": "A project to build and optimize a new user management system.",
+    "columns": [
+      {
+        "id": "col1",
+        "name": "Backlog",
+        "tasks": []
+      },
+      {
+        "id": "col2",
+        "name": "In Progress",
+        "tasks": []
+      },
+      {
+        "id": "col3",
+        "name": "Pending",
+        "tasks": []
+      },
+      {
+        "id": "col4",
+        "name": "Completed",
+        "tasks": []
+      }
+    ]
+  }
+]
