@@ -3,6 +3,7 @@
 import { useTimelineContext } from "@/context/TimelineContext"
 import DropDown from "../atoms/DropDown"
 import { useState } from "react"
+import NavigationButton from "../atoms/NavigationButton"
 const timeOptions = ['Day', 'Week', 'Month']
 
 export default function TimelineOptions(){  
@@ -17,10 +18,10 @@ export default function TimelineOptions(){
 
     return(
         <div className="flex h-max items-center gap-8"> 
-            <div className="flex gap-2 items-center">
-                <button onClick={() => decreaseCount()}>Previous</button>
+            <div className="flex gap-4 items-center">
+                <NavigationButton clickFn={decreaseCount} rotate={'rotate-90'} />
                 <p className="text-xl font-bold">{name}</p>
-                <button onClick={() => increaseCount()}>Next</button>
+                <NavigationButton clickFn={increaseCount} rotate={'rotate-[-90deg]'} />
             </div>
             <div className="relative w-40">
                 <button 

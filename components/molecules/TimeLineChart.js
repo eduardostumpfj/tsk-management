@@ -29,18 +29,31 @@ export default function TimeLineChart({activeProject}){
     const tasksWithGridPosition = tasksInRange.map((task) => {
         const date1 = new Date(task.starting_date)
         const date2 = new Date(task.delivery_date)
-
-        let startIndex = 0
-        let endIndex = 0 
+ 
+        let foundStart = false 
+        let startIndex = 1
+        let endIndex = 1 
+ 
         timelineRange.forEach((tl, index) => {
-            if(date1.getDay() === tl.getDay() && date1.getMonth() === tl.getMonth() && date1.getFullYear() === tl.getFullYear() ){ startIndex = index}
-            if(date2.getDay() === tl.getDay() && date2.getMonth() === tl.getMonth() && date2.getFullYear() === tl.getFullYear() ){ endIndex = index}         
+            console.log(task.name, date1.getDate() === tl.getDate())
+
+            if(date1.getFullYear() == tl.getFullYear() && date1.getMonth() == tl.getMonth() && date1.getDate() === tl.getDate()){
+                if(!foundStart){
+                    startIndex = index + 1
+                    foundStart = true
+                }
+            }
+            if(date2.getFullYear() == tl.getFullYear() && date2.getMonth() == tl.getMonth() && date2.getDate() === tl.getDate()){
+                endIndex = index + 3
+            }         
         });
-    
+
+        if(startIndex >= 1 && endIndex == 1){ endIndex = timelineRange.length + 1}
+        console.log("Final" + task.name, startIndex, endIndex)
         return {
           ...task,
-          gridColumnStart: startIndex + 1,
-          gridColumnEnd: endIndex + 1,
+          gridColumnStart: startIndex,
+          gridColumnEnd: endIndex,
         };
     });
 

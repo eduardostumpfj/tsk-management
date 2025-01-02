@@ -6,11 +6,10 @@ const TimelineContext = createContext()
 
 export const TimelineContextProvider = ({children}) => {
     const [timelineType, setTimelineType] = useState('Week')
-    const [timelineRange, setTimelineRange] = useState(getTimelineRange('Week'))
     const [clickCount, setclickCount] = useState(0)
+    const [timelineRange, setTimelineRange] = useState(getTimelineRange('Week'))
 
     useEffect(() => {
-        console.log(clickCount)
         const newRange = getTimelineRange(timelineType)
         setTimelineRange(newRange)
     },[clickCount])
@@ -19,26 +18,28 @@ export const TimelineContextProvider = ({children}) => {
         let range = []
         if(type === 'Month'){
             const today = new Date();
-            const year = today.getFullYear();
-            const month = today.getMonth() + clickCount;
+            const month = today.getMonth() + Math.ceil((clickCount*-1)/12)*12 + clickCount;
+            const year = today.getFullYear() + Math.floor(clickCount/12);
             range = getDaysInMonth(year, month)
             
-        } else {            
+        } else {        
             let count
             if(type === 'Week'){
-                 count = 7
+                count = 7 
             } else if(type === 'Day'){
                 count = 1
             }
-    
+
+            const today = new Date();
+            const startDay = new Date(today)    
+            startDay.setDate(today.getDate() + clickCount * count)
+            
             for(let i = 0; i < count; i++){
-                const today = new Date();
-                const nextDate = new Date(today);
-                nextDate.setDate(today.getDate() + i);
+                const nextDate = new Date(startDay);
+                nextDate.setDate(startDay.getDate() + i);
                 range.push(nextDate)
             }
         }
-
         return range 
     }
     function getDaysInMonth(year, month) {
@@ -46,8 +47,8 @@ export const TimelineContextProvider = ({children}) => {
         const date = new Date(year, month, 1);
       
         while (date.getMonth() === month) {
-          days.push(new Date(date)); // Add a copy of the current date
-          date.setDate(date.getDate() + 1); // Move to the next day
+          days.push(new Date(date));
+          date.setDate(date.getDate() + 1);
         }
       
         return days;
@@ -55,17 +56,15 @@ export const TimelineContextProvider = ({children}) => {
 
     function changeTimelineType(type){
         setTimelineType(type)
+        setclickCount(0)
         const newRange = getTimelineRange(type)
         setTimelineRange(newRange)
-
     }
 
-    function decreaseCount(){
-        console.log('voltou')
+    function decreaseCount(){      
         setclickCount(prev => (prev -= 1))
     }
     function increaseCount(){
-        if(clickCount >= 0){ return }
         setclickCount(prev => prev += 1)
     }
     return (
