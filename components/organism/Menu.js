@@ -6,7 +6,7 @@ import Link from 'next/link'
 import LinkMenu from '../atoms/LinkMenu'
 import { usePathname } from 'next/navigation'
 
-export default function Menu({params}){
+export default function Menu(){
     const url = usePathname()
 
     return (
@@ -32,13 +32,6 @@ export default function Menu({params}){
                         <path d="M11 12H16"/>
                         <path d="M11 9H16"/>
                         <path d="M11 6H16"/>
-                    </svg>
-                </LinkMenu>
-                <LinkMenu href='/meetings' active={url == '/meetings'}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="23" viewBox="0 0 22 19" fill="none">
-                        <rect x="1" y="1" width="15.5556" height="17" rx="4"/>
-                        <path d="M16.5555 6.64848C16.5555 6.30686 16.7299 5.98889 17.018 5.80525L19.4624 4.24692C20.1281 3.82254 21 4.30069 21 5.09014V15.0433C21 15.8328 20.1281 16.3109 19.4624 15.8865L17.018 14.3282C16.7299 14.1446 16.5555 13.8266 16.5555 13.485V6.64848Z"/>
-                        <path d="M9.88885 6.09998H13.2222"/>
                     </svg>
                 </LinkMenu>
             </div>

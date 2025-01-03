@@ -26,7 +26,7 @@ export default function PriorityInput({priority, onChange, isNew}){
                         ${isNew && 'bg-dark-700 outline-1 outline-light-700 outline-dashed flex justify-between items-center hover:bg-dark-700 '}`}
                     >{activePriority.charAt(0).toUpperCase() + activePriority.slice(1) }
                     {isNew &&
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none">
+                        <svg className={`${isOpen ? 'rotate-180' : 'rotate-0'} transition-all`} xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none">
                             <path d="M1 0.5L8 7.5L15 0.5" stroke="white" strokeWidth='2' strokeLinecap="round"/>
                         </svg>
                     }

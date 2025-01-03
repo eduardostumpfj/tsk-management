@@ -29,7 +29,7 @@ export default function TimelineOptions(){
                     onClick={() => setIsOpen(!isOpen)}
                     className="bg-purple-100 w-full font-bold text-light-100 px-4 py-2 rounded-md justify-self-end flex items-center justify-between gap-4 hover:bg-purple-300">
                     <p>{timelineType}</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none">
+                    <svg className={`${isOpen ? 'rotate-180' : 'rotate-0'} transition-all`} xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none">
                         <path d="M1 0.5L8 7.5L15 0.5" stroke="white" strokeWidth='2' strokeLinecap="round"/>
                     </svg>
                     

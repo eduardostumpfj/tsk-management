@@ -5,7 +5,7 @@ import { useTimelineContext } from "@/context/TimelineContext"
 import TimelineCard from "../atoms/TimeLineCard"
 
 export default function TimeLineChart({activeProject}){
-    const {timelineRange} = useTimelineContext()
+    const {timelineRange, timelineType} = useTimelineContext()
     const {tasks} = useProjects()
     const tlStart = timelineRange[0]
     const tlEnd = timelineRange[timelineRange.length - 1]
@@ -35,11 +35,9 @@ export default function TimeLineChart({activeProject}){
         let endIndex = 1 
  
         timelineRange.forEach((tl, index) => {
-            console.log(task.name, date1.getDate() === tl.getDate())
-
             if(date1.getFullYear() == tl.getFullYear() && date1.getMonth() == tl.getMonth() && date1.getDate() === tl.getDate()){
                 if(!foundStart){
-                    startIndex = index + 1
+                    timelineType == 'Month' ? startIndex = index + 2 : startIndex = index + 1
                     foundStart = true
                 }
             }
@@ -49,7 +47,6 @@ export default function TimeLineChart({activeProject}){
         });
 
         if(startIndex >= 1 && endIndex == 1){ endIndex = timelineRange.length + 1}
-        console.log("Final" + task.name, startIndex, endIndex)
         return {
           ...task,
           gridColumnStart: startIndex,
@@ -80,9 +77,9 @@ export default function TimeLineChart({activeProject}){
             <div className="h-[200px] grid overflow-scroll scrollbar-none row-start-2 row-end col-start-1 col-end-2 relative z-10" style={style}>
                 {
                     tasksWithGridPosition.map( (tks, index) => {
-                        const Nstyle={gridColumn:`${tks.gridColumnStart}/${tks.gridColumnEnd}`, gridRow:`${index+1}/${index+2}`}
+                        const Nstyle={gridColumn:`${tks.gridColumnStart}/${tks.gridColumnEnd}`, gridRow:`${index+1}/${index+2}`,transformOrigin: "bottom left"}
                         return (
-                            <TimelineCard style={Nstyle} task={tks} key={tks.id}/>
+                            <TimelineCard style={Nstyle} task={tks} key={tks.id} index={index}/>
                         )
                     })
                 }

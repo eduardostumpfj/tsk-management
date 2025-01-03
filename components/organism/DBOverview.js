@@ -3,7 +3,8 @@
 import { useProjects } from "@/context/TaskContext"
 import { useState } from "react"
 import DonutChart from "../molecules/DonutChart"
-import DBProjectHeader from "../molecules/DBProjectHeader"
+import { motion } from "framer-motion";
+import StatusPercentage from "../atoms/StatusPercentage";
 
 export default function DBOverview(){
     const { projects, tasks } = useProjects()
@@ -25,39 +26,42 @@ export default function DBOverview(){
     function handleClick(id){
         setIsOpen(false)
         const proj = projects.findIndex( proj => proj.id === id)
-        console.log(proj) 
         setActiveProject(projects[proj])
     }
 
     return (
         <div className="p-8 bg-dark-900 rounded-small grid gap-2">
-            <DBProjectHeader handleClick={handleClick} activeProject={activeProject}/>
+            <p className="font-bold text-xl" >Projects Overview</p>
             <div className="grid grid-cols-[2fr,1fr]">
-                <div className="h-[200px] w-[200px] self-center m-auto">
+                <motion.div
+                    initial={{opacity:0, y:20}} 
+                    animate={{opacity:1, y:0}} 
+                    className="h-[200px] w-[200px] self-center m-auto"
+                >
                     <DonutChart data={data}/>
-                </div>
-                <div className="flex flex-col justify-between">
-                    <div className="grid grid-cols-[12px,1fr] gap-2 items-start">
+                </motion.div>
+                <div className="flex flex-col justif>y-between">
+                    <StatusPercentage index={0}>
                         <div className="rounded-full bg-purple-100 w-[12px] h-[12px] mt-[6px]"></div>
                         <p>
                             In Progress
                             <br/><span className="font-bold">{getValue(data[1].value)}%</span>
                         </p>
-                    </div>
-                    <div className="grid grid-cols-[12px,1fr] gap-2 items-start">
+                    </StatusPercentage>
+                    <StatusPercentage index={1}>
                         <div className="rounded-full bg-salmon-100 w-[12px] h-[12px] mt-[6px]"></div>
                         <p>
                             Completed
                             <br/><span className="font-bold">{getValue(data[2].value)}%</span>
                         </p>
-                    </div>
-                    <div className="grid grid-cols-[12px,1fr] gap-2 items-start">
+                    </StatusPercentage>
+                    <StatusPercentage index={2}>
                         <div className="rounded-full bg-green-100 w-[12px] h-[12px] mt-[6px]"></div>
                         <p>
                             Not Started
                             <br/><span className="font-bold">{getValue(data[0].value)}%</span>
                         </p>
-                    </div>
+                    </StatusPercentage>
                 </div>
             </div>
         </div>
