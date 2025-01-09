@@ -1,112 +1,112 @@
 [
-    {
-      "id": "t1",
-      "name": "Design Landing Page",
-      "description": "Create a visually appealing landing page for the new feature.",
-      "priority": "high",
-      "category": "UX",
-      "starting_date": "2025-01-02",
-      "delivery_date": "2025-01-25",
-      "column_id": "col1",
-      "project_id": "proj1"
-    },
-    {
-      "id": "t2",
-      "name": "Develop Login API",
-      "description": "Implement secure login functionality using OAuth 2.0.",
-      "priority": "medium",
-      "category": "Development",
-      "starting_date": "2025-01-02",
-      "delivery_date": "2025-01-25",
-      "column_id": "col2",
-      "project_id": "proj1"
-    },
-    {
-      "id": "t3",
-      "name": "Create Onboarding Flow",
-      "description": "Design and prototype the user onboarding experience.",
-      "priority": "low",
-      "category": "UX",
-      "starting_date": "2025-01-15",
-      "delivery_date": "2025-02-10",
-      "column_id": "col1",
-      "project_id": "proj1"
-    },
-    {
-      "id": "t4",
-      "name": "Style Dashboard",
-      "description": "Apply UI styles and interactions for the analytics dashboard.",
-      "priority": "medium",
-      "category": "UI",
-      "starting_date": "2025-01-22",
-      "delivery_date": "2025-01-25",
-      "column_id": "col2",
-      "project_id": "proj1"
-    },
-    {
-      "id": "t5",
-      "name": "Fix Authentication Bug",
-      "description": "Resolve the issue where user tokens are expiring prematurely.",
-      "priority": "high",
-      "category": "Development",
-      "starting_date": "2025-01-18",
-      "delivery_date": "2025-01-25",
-      "column_id": "col3",
-      "project_id": "proj1"
-    },
-    {
-      "id": "t6",
-      "name": "Design Profile Page",
-      "description": "Create a responsive design for user profile pages.",
-      "priority": "low",
-      "category": "UI",
-      "starting_date": "2025-01-28",
-      "delivery_date": "2025-01-22",
-      "column_id": "col1",
-      "project_id": "proj1"
-    },
-    {
-      "id": "t7",
-      "name": "Build Notification Service",
-      "description": "Develop a microservice to handle user notifications.",
-      "priority": "high",
-      "category": "Development",
-      "starting_date": "2025-01-05",
-      "delivery_date": "2025-01-25",
-      "column_id": "col2",
-      "project_id": "proj1"
-    },
-    {
-      "id": "t8",
-      "name": "Improve Checkout UX",
-      "description": "Redesign the checkout flow to reduce friction and improve conversions.",
-      "priority": "medium",
-      "category": "UX",
-      "starting_date": "2025-01-19",
-      "delivery_date": "2025-01-25",
-      "column_id": "col3",
-      "project_id": "proj1"
-    },
-    {
-      "id": "t9",
-      "name": "Create Theme Switcher",
-      "description": "Add light/dark mode toggle for better usability.",
-      "priority": "low",
-      "category": "UI",
-      "starting_date": "2025-01-30",
-      "delivery_date": "2025-01-14",
-      "column_id": "col3",
-      "project_id": "proj1"
-    },
-    {
-      "id": "t10",
-      "name": "Optimize Database Queries",
-      "description": "Improve the performance of database queries for the reports module.",
-      "priority": "high",
-      "category": "Development",
-      "starting_date": "2025-01-05",
-      "delivery_date": "2025-01-10",
-      "column_id": "col4",
-      "project_id": "proj1"
-    }
-  ]
+  {
+    "id": "t1",
+    "name": "Design Landing Page",
+    "description": "Create a visually appealing landing page for the new feature.",
+    "priority": "high",
+    "category": "UX",
+    "starting_date": "2025-01-02",
+    "delivery_date": "2025-01-25",
+    "column_id": "col1",
+    "project_id": "proj1"
+  },
+  {
+    "id": "t2",
+    "name": "Develop Login API",
+    "description": "Implement secure login functionality using OAuth 2.0.",
+    "priority": "medium",
+    "category": "Development",
+    "starting_date": "2025-01-02",
+    "delivery_date": "2025-01-25",
+    "column_id": "col2",
+    "project_id": "proj1"
+  },
+  {
+    "id": "t3",
+    "name": "Create Onboarding Flow",
+    "description": "Design and prototype the user onboarding experience.",
+    "priority": "low",
+    "category": "UX",
+    "starting_date": "2025-01-15",
+    "delivery_date": "2025-02-10",
+    "column_id": "col1",
+    "project_id": "proj1"
+  },
+  {
+    "id": "t4",
+    "name": "Style Dashboard",
+    "description": "Apply UI styles and interactions for the analytics dashboard.",
+    "priority": "medium",
+    "category": "UI",
+    "starting_date": "2025-01-22",
+    "delivery_date": "2025-01-25",
+    "column_id": "col2",
+    "project_id": "proj1"
+  },
+  {
+    "id": "t5",
+    "name": "Fix Authentication Bug",
+    "description": "Resolve the issue where user tokens are expiring prematurely.",
+    "priority": "high",
+    "category": "Development",
+    "starting_date": "2025-01-18",
+    "delivery_date": "2025-01-25",
+    "column_id": "col3",
+    "project_id": "proj1"
+  },
+  {
+    "id": "t6",
+    "name": "Design Profile Page",
+    "description": "Create a responsive design for user profile pages.",
+    "priority": "low",
+    "category": "UI",
+    "starting_date": "2025-01-28",
+    "delivery_date": "2025-01-22",
+    "column_id": "col1",
+    "project_id": "proj1"
+  },
+  {
+    "id": "t7",
+    "name": "Build Notification Service",
+    "description": "Develop a microservice to handle user notifications.",
+    "priority": "high",
+    "category": "Development",
+    "starting_date": "2025-01-05",
+    "delivery_date": "2025-01-25",
+    "column_id": "col2",
+    "project_id": "proj1"
+  },
+  {
+    "id": "t8",
+    "name": "Improve Checkout UX",
+    "description": "Redesign the checkout flow to reduce friction and improve conversions.",
+    "priority": "medium",
+    "category": "UX",
+    "starting_date": "2025-01-19",
+    "delivery_date": "2025-01-25",
+    "column_id": "col3",
+    "project_id": "proj1"
+  },
+  {
+    "id": "t9",
+    "name": "Create Theme Switcher",
+    "description": "Add light/dark mode toggle for better usability.",
+    "priority": "low",
+    "category": "UI",
+    "starting_date": "2025-01-30",
+    "delivery_date": "2025-01-14",
+    "column_id": "col3",
+    "project_id": "proj1"
+  },
+  {
+    "id": "t10",
+    "name": "Optimize Database Queries",
+    "description": "Improve the performance of database queries for the reports module.",
+    "priority": "high",
+    "category": "Development",
+    "starting_date": "2025-01-05",
+    "delivery_date": "2025-01-10",
+    "column_id": "col4",
+    "project_id": "proj1"
+  }
+]
