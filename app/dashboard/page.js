@@ -9,7 +9,9 @@ export default function Dashboard(){
 
 
     return (
-        <div className="rounded-normal w-full h-full grid grid-rows-[100px,1fr,1fr] gap-4">
+        <div className="rounded-normal w-full h-full grid grid-rows-[repeat(4,max-content)] gap-4
+                        md:grid-rows-[100px,1fr,1fr]
+        ">
             <DBStatus />
             <div className="grid grid-cols-2 gap-4">
                 <DBCategorys />

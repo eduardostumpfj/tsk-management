@@ -12,12 +12,12 @@ export default function LinkMenu({  active = false ,href ,children}){
         >
             <Link
                 href={href}
-                className={`w-full aspect-square rounded-full grid items-center justify-center`}
+                className={`w-[50px] lg:w-[66px] aspect-square rounded-full grid items-center justify-center`}
             >
                 <div className={`relative z-10 ${active ? 'stroke-light-300' : 'stroke-dark-700'}`}>{children}</div>
                 { !active && (
                     <motion.div
-                        className='w-full h-full bg-purple-300 absolute rounded-full top-0 right-0'
+                        className='w-[50px] lg:w-[66px] bg-purple-300 absolute rounded-full top-0 right-0'
                         variants={{
                             hidden: { scale: 0, opacity: 0 },
                             hover: { scale: 1, opacity: 1 },

@@ -9,10 +9,17 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="bg-dark-900 text-light-300 h-screen">
           <TaskProvider>
-              <div className="grid grid-cols-[130px_1fr] gap-8 p-8 h-full">
+              <div className="grid grid-cols-1 grid-rows-[60px_1fr] gap-4 px-4 pt-4
+                              md:grid-cols-[60px_1fr] md:grid-rows-1 md:h-full md:pb-4
+                              lg:p-8 lg:grid-cols-[130px_1fr] lg:gap-8
+              ">
                 <Menu />
                 <Suspense>
-                  <section className="bg-dark-700 rounded-normal p-8 overflow-hidden">{children}</section>
+                  <section className="bg-dark-700 rounded-normal p-4 overflow-hidden
+                                      lg:p-8
+                                    ">
+                    {children}
+                  </section>
                 </Suspense>
               </div>
           </TaskProvider>

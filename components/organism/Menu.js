@@ -10,14 +10,17 @@ export default function Menu(){
     const url = usePathname()
 
     return (
-        <section className='bg-purple-100 rounded-normal grid grid-rows-[76px_1fr_76px] items-center justify-center p-8'>
+        <section className='grid-rows-1 grid-cols-[50px_1fr_50px] bg-purple-100 rounded-normal grid items-center justify-center p-2
+                            md:grid-cols-1 md:grid-rows-[50px_1fr_50px]
+                            lg:grid-rows-[76px_1fr_76px] lg:p-8
+        '>
             <Link href='/'>
                 <Image src={logo.src} width={76} height={76} alt='Logo' priority/>
             </Link>
 
-            <div className='grid gap-4'>
+            <div className='flex w-full justify-center md:grid gap-4'>
                 <LinkMenu href='/dashboard' active={url == '/dashboard'}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 20 20" fill="none">
+                    <svg className='w-[20px] lg:w-[25px] aspect-square' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
                         <rect x="0.5" y="0.5" width="7.88889" height="7.88889" rx="2.5"/>
                         <rect x="11.6111" y="0.5" width="7.88889" height="7.88889" rx="2.5"/>
                         <rect x="0.5" y="11.6111" width="7.88889" height="7.88889" rx="2.5"/>
@@ -25,7 +28,7 @@ export default function Menu(){
                     </svg>
                 </LinkMenu>
                 <LinkMenu href='/projects' active={url == '/projects'}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 20 17" fill="none">
+                    <svg className='w-[20px] lg:w-[25px] aspect-square' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 17" fill="none">
                         <rect x="0.5" y="0.5" width="19" height="16" rx="3.5"/>
                         <rect x="4.5" y="5.5" width="4" height="4" rx="1.5"/>
                         <path d="M4 12H9"/>
