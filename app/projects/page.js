@@ -24,9 +24,9 @@ export default function Projects(){
                         projects.length > 0
                         && <div
                             ref={page}
-                            className="bg-dark-900 rounded-normal overflow-hidden w-full h-full p-8 grid grid-rows-[1fr_800px] gap-8">
-                            <ProjectHeader />
-                            <Board parentRef={page} />
+                            className="bg-dark-900 rounded-normal overflow-hidden w-full h-full p-4 xl:p-8 grid grid-rows-[1fr_800px] gap-4 lg:gap-8">
+                                <ProjectHeader />
+                                <Board parentRef={page} />
                         </div>
                      
                     }

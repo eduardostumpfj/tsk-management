@@ -42,12 +42,12 @@ export default function ProjectColumn({ column, index }) {
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay: index / 40 }}
       style={{ outline: isOver ? "solid 2px black" : undefined }}
-      className={`h-max max-h-full ${columnColor} rounded-small p-4`}
+      className={`w-full h-max max-h-[950px] xl:max-h-full ${columnColor} rounded-small p-4`}
     >
       <div className="bg-dark-700 rounded-small p-4 font-bold text-light-300 text-[1.15rem] flex justify-between items-center">
         <p>{column.name}</p>
         <button
-          className="text-xl stroke-white hover:stroke-purple-100 transition-colors duration-200"
+          className="md:text-[1rem] lg:text-xl stroke-white hover:stroke-purple-100 transition-colors duration-200"
           onClick={() => openModal({ type: "newTask", data: { col: column.id } })}
         >
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 36 36" fill="none">
@@ -59,7 +59,7 @@ export default function ProjectColumn({ column, index }) {
       </div>
       {
         !isOnDiferentColumn &&
-        <div className="flex flex-col gap-4 mt-8 h-max max-h-[550px] overflow-y-scroll overflow-x-hidden scrollbar-none" id={column.id}>
+        <div className="flex flex-col gap-4 mt-8 h-max md:max-h-[640px] lg:max-h-[600px] xl:max-h-[550px] overflow-y-scroll overflow-x-hidden scrollbar-none" id={column.id}>
           {column.tasks.map((task) => <TaskButton key={task.id} task={task} activeTask={activeTask} /> )}
         </div>
       }

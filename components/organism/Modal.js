@@ -22,7 +22,7 @@ export default function Modal(){
                 <motion.div 
                     initial={{opacity:0, y:-20}}
                     animate={{opacity:1, y:0}}
-                    className="max-h-[90vh] w-[50vw] bg-dark-500 m-auto rounded-normal p-8"
+                    className="max-h-[90vh] w-[95vw] lg:w-[70vw] xl:w-[50vw] bg-dark-500 m-auto rounded-normal p-8"
                     >
                     {modalContent.type === 'newTask' && <NewTask/>}
                     {modalContent.type === 'detail' && <TaskDetail />} 

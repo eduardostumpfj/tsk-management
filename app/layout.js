@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
                 <Menu />
                 <Suspense>
                   <section className="bg-dark-700 rounded-normal p-4 overflow-hidden
-                                      lg:p-8
+                                      xl:p-8
                                     ">
                     {children}
                   </section>

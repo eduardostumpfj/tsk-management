@@ -10,7 +10,8 @@ export default function Menu(){
     const url = usePathname()
 
     return (
-        <section className='grid-rows-1 grid-cols-[50px_1fr_50px] bg-purple-100 rounded-normal grid items-center justify-center p-2
+        <section className='grid-rows-1 grid-cols-[50px_max-content] bg-purple-100 rounded-normal grid items-center justify-between p-2
+                            sm:grid-cols-[50px_1fr_50px] sm:justify-center
                             md:grid-cols-1 md:grid-rows-[50px_1fr_50px]
                             lg:grid-rows-[76px_1fr_76px] lg:p-8
         '>
@@ -18,7 +19,7 @@ export default function Menu(){
                 <Image src={logo.src} width={76} height={76} alt='Logo' priority/>
             </Link>
 
-            <div className='flex w-full justify-center md:grid gap-4'>
+            <div className='flex w-fit sm:w-full justify-center md:grid gap-4'>
                 <LinkMenu href='/dashboard' active={url == '/dashboard'}>
                     <svg className='w-[20px] lg:w-[25px] aspect-square' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
                         <rect x="0.5" y="0.5" width="7.88889" height="7.88889" rx="2.5"/>

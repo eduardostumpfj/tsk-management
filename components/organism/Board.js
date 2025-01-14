@@ -85,7 +85,7 @@ export default function Board() {
         onDragOver={handleDragOver}
         onDragEnd={handleDragEnd}
       >
-        <ul className={`w-full h-[calc(100%-2rem)] grid grid-cols-4 gap-8 relative row-[2/3]`}>
+        <ul className={`w-full lg:h-[calc(100%-0rem)] 2xl:h-full overflow-x-scroll lg:overflow-hidden  grid grid-cols-[repeat(4,300px)] lg:grid-cols-4 gap-2 xl:gap-8 relative row-[2/3] scrollbar-none`}>
           {
             activeProject?.columns.map((column, index) => {
               const columnTasks = tasks.filter((task) => task.column_id === column.id && task.project_id === activeProject.id );

@@ -34,7 +34,7 @@ export default function CategoryChart({name, amount, total, index}){
                 initial={{ opacity:0,y:5 }}
                 animate={{opacity: 1, y:0}}
                 transition={{ delay: index / 20 }}
-                className="text-dark-500 uppercase"
+                className="text-dark-500 uppercase text-sm lg:text-[1rem]"
             >
                 {name}
             </motion.p>

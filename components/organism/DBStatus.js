@@ -9,6 +9,7 @@ export default function DBStatus(){
     return (
         <div
             className="grid grid-cols-1 gap-4 h-fit max-w-full w-full
+                        sm:grid-cols-2
                         md:grid-cols-4 md:w-full
             ">
             {projects[0]?.columns.map((column, index) => {

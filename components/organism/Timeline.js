@@ -17,7 +17,7 @@ export default function Timeline(){
     }
     return (
         <TimelineContextProvider>
-            <div className="p-8 bg-dark-900 rounded-small grid grid-rows-[max-content,1fr] gap-4">
+            <div className="hidden md:grid p-8 bg-dark-900 rounded-small grid-rows-[max-content,1fr] gap-4">
                 <div className="grid grid-cols-[1fr,max-content] gap-2">
                     <DBProjectHeader handleClick={handleClick} activeProject={activeProject}/>
                     <TimelineOptions />

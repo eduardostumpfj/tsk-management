@@ -14,11 +14,13 @@ export default function DBCategories(){
         categoriesData.push({name:cat, amount})
     })
     return (
-        <div className="p-8 bg-light-100 rounded-small grid grid-rows-[max-content,1fr] gap-4 text-dark-700">
-            <p className="font-bold text-xl">Categories Overview</p>
-            <div className="justify-between grid grid-cols-3 px-4 w-full text-center">
+        <div className="p-4 md:p-8 bg-light-100 rounded-small grid grid-rows-[max-content,1fr] gap-4 text-dark-700 h-[250px] md:h-full">
+            <p className="font-bold text-[1rem] lg:text-xl">Categories Overview</p>
+            <div className="grid grid-cols-[repeat(3,max-content)] justify-center px-0 w-full text-center gap-4
+                            sm:grid-cols-3 md:px-4 sm:justify-between sm:gap-0
+            ">
                 {
-                    categoriesData.map((cat, index) => {
+                    categoriesData.map((cat, index) => { 
                         return <CategoryChart key={index} index={index}  name={cat.name} amount={cat.amount} total={tasks.length}/>
                     })
                 }

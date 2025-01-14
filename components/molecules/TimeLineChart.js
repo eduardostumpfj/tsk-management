@@ -10,7 +10,7 @@ export default function TimeLineChart({activeProject}){
     const tlStart = timelineRange[0]
     const tlEnd = timelineRange[timelineRange.length - 1]
 
-    // Get taks in Range
+    // Get tasks in Range
     const tasksInRange = tasks.filter(tks => {
         const date1 = new Date(tks.starting_date)
         const date2 = new Date(tks.delivery_date)

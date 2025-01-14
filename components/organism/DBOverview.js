@@ -30,17 +30,17 @@ export default function DBOverview(){
     }
 
     return (
-        <div className="p-8 bg-dark-900 rounded-small grid gap-2">
-            <p className="font-bold text-xl" >Projects Overview</p>
-            <div className="grid grid-cols-[2fr,1fr]">
+        <div className="p-4 md:p-8 bg-dark-900 rounded-small grid gap-2">
+            <p className="font-bold text-[1rem] lg:text-xl" >Projects Overview</p>
+            <div className="grid grid-cols-1 md:grid-cols-[max-content_1fr] lg:grid-cols-[2fr,1fr] gap-2 lg:gap-0">
                 <motion.div
                     initial={{opacity:0, y:20}} 
                     animate={{opacity:1, y:0}} 
-                    className="h-[200px] w-[200px] self-center m-auto"
+                    className="w-[200px] sm:w-[300px] md:h-[140px] md:w-[130px] lg:h-[200px] lg:w-[200px] aspect-square self-center m-auto"
                 >
                     <DonutChart data={data}/>
                 </motion.div>
-                <div className="flex flex-col justif>y-between">
+                <div className="flex flex-col sm:flex-row sm:justify-between md:flex-col justif>y-between self-center lg:self-start">
                     <StatusPercentage index={0}>
                         <div className="rounded-full bg-purple-100 w-[12px] h-[12px] mt-[6px]"></div>
                         <p>

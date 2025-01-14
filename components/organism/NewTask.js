@@ -73,7 +73,7 @@ export default function NewTask(){
 
     return(
         <form className="text-light-700 grid gap-4">
-            <div className="flex justify-between px-3">
+            <div className="flex flex-col-reverse sm:flex-row gap-4 sm:gap-0 justify-between px-3">
                 <PriorityInput isNew={true} priority='low' onChange={(value) => handleFormChange('priority', value)} />
                 <CategoryInput isNew={true} category='UI' onChange={(value) => handleFormChange('category', value)}></CategoryInput>
                 <p className="text-light-100 text-xl font-bold">{col.name}</p>
@@ -85,7 +85,7 @@ export default function NewTask(){
                 text={formData.name} 
                 onChange={(value) => handleFormChange('name', value)}
             />
-            <div className="flex gap-2 px-3 items-center">
+            <div className="flex flex-col sm:flex-row sm:gap-2 px-3 items-start sm:items-center">
                 <label className="min-w-[6.5rem]">Start Date:</label>
                 <DateInput
                     isWrong={formError?.starting_date} 
@@ -94,7 +94,7 @@ export default function NewTask(){
                     onChange={(value) => handleFormChange('starting_date', value)}
                 />
             </div>
-            <div className="flex gap-2 px-3 items-center">
+            <div className="flex flex-col sm:flex-row sm:gap-2 px-3 items-start sm:items-center">
                 <label className="min-w-[6.5rem]">Delivery Date:</label>
                 <DateInput
                     isWrong={formError?.delivery_date}  

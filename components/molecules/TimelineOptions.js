@@ -20,7 +20,7 @@ export default function TimelineOptions(){
         <div className="flex h-max items-center gap-8"> 
             <div className="flex gap-4 items-center">
                 <NavigationButton clickFn={decreaseCount} rotate={'rotate-90'} />
-                <p className="text-xl font-bold">{name}</p>
+                <p className="text-[1rem] lg:text-xl font-bold">{name}</p>
                 <NavigationButton clickFn={increaseCount} rotate={'rotate-[-90deg]'} />
             </div>
             <div className="relative w-40">

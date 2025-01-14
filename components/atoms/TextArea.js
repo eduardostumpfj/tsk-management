@@ -28,7 +28,7 @@ export default function TextArea({text, onChange, isTitle, isWrong}){
             rows='1'
             className={`
                 ${isTitle ? 'font-extrabold text-3xl' : 'text-xl' }
-                cursor-pointer text-light-100 px-3 pt-2 overflow-hidden resize-none rounded-small bg-dark-500 mb-3
+                cursor-pointer text-light-100 max-w-[calc(100%-2rem)] md:max-w-full px-3 pt-2 overflow-hidden resize-none rounded-small bg-dark-500 mb-3
                 focus:bg-dark-700 focus:outline-none focus-visible:outline-none
                 hover:bg-dark-6007
                 ${isTitle && isWrong && 'outline-red-600 outline-double'}

@@ -13,7 +13,9 @@ export default function Dashboard(){
                         md:grid-rows-[100px,1fr,1fr]
         ">
             <DBStatus />
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4 h-full
+                            md:grid-cols-2
+            ">
                 <DBCategorys />
                 <DBOverview />
             </div>
