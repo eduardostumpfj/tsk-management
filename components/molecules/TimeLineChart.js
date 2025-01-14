@@ -37,16 +37,20 @@ export default function TimeLineChart({activeProject}){
         timelineRange.forEach((tl, index) => {
             if(date1.getFullYear() == tl.getFullYear() && date1.getMonth() == tl.getMonth() && date1.getDate() === tl.getDate()){
                 if(!foundStart){
-                    timelineType == 'Month' ? startIndex = index + 2 : startIndex = index + 1
+                    timelineType == 'Month' ? startIndex = index + 2 : null
+                    timelineType == 'Week'  ? startIndex = index + 1 : null
+                    timelineType == 'Day'   ? startIndex = index     : null
                     foundStart = true
                 }
             }
             if(date2.getFullYear() == tl.getFullYear() && date2.getMonth() == tl.getMonth() && date2.getDate() === tl.getDate()){
-                endIndex = index + 3
+                //endIndex = index + 3
+                timelineType == 'Week'  ? endIndex = index + 1: null
+                timelineType == 'Month' ? endIndex = index + 2: null
             }         
         });
-
         if(startIndex >= 1 && endIndex == 1){ endIndex = timelineRange.length + 1}
+        console.log(startIndex, endIndex)
         return {
           ...task,
           gridColumnStart: startIndex,
