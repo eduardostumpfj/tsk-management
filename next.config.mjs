@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
-    basePath: '/tks-management',
-    assetPrefix: '/tks-management'
+    distDir: 'dist',
+    images: {
+        unoptimized: true,
+    },
 };
 
 export default nextConfig;
