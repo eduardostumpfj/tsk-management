@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    exportTrailingSlash: true,
     output: 'export',
     distDir: 'dist',
     images: {
