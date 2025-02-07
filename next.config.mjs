@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'exports',
+    basePath:'/tsk-management',
+    output: 'export',
   };
   
   export default nextConfig;
