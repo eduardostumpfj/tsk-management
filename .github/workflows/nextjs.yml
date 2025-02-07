@@ -24,6 +24,11 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+It looks like there is a syntax error in your shell script. The script might be missing a closing fi statement to properly end the if block.
+
+Here's the corrected version of the .github/workflows/nextjs.yml:
+
+YAML
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -46,6 +51,7 @@ jobs:
           else
             echo "Unable to determine package manager"
             exit 1
+          fi
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
