@@ -46,11 +46,10 @@ jobs:
           else
             echo "Unable to determine package manager"
             exit 1
-          fi
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "16"  # Use Node.js LTS version
           cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Setup Pages
         uses: actions/configure-pages@v5
